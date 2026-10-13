@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrossel em HTML e CSS</title>
+
+    <style>
+
+        /* =========================
+           PALETA DE CORES
+        ========================== */
+
+        ```css
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F2E8D5;
+    color: #171717;
+}
+
+header {
+    background-color: #171717;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 5px solid #D4A84F;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #8B1E2D;
+}
+
+.carrossel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    border: 5px solid #171717;
+    border-radius: 15px;
+}
+
+.slide {
+    width: 100%;
+    min-width: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    background-color: #FFFFFF;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.slide figcaption {
+    background-color: #8B1E2D;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 18px;
+    font-size: 18px;
+    border-top: 3px solid #D4A84F;
+}
+
+footer {
+    background-color: #171717;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    border-top: 5px solid #D4A84F;
+}
+```
+
+
+        /* =========================
+           RESPONSIVIDADE
+        ========================== */
+
+        @media (max-width: 700px) {
+
+            .slide img {
+                height: 300px;
+            }
+
+            .slide figcaption {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+
+        <h1>Galeria de Cinema</h1>
+
+        <p>Conheça alguns filmes expostos no cinema</p>
+
+    </header>
+
+
+    <main>
+
+        <section>
+
+            <h2>Principais Filmes</h2>
+
+
+            <div class="carrossel">
+
+
+                ```html
+<figure class="slide">
+    <img
+        src="https://upload.wikimedia.org/wikipedia/pt/5/5f/Scream_p%C3%B4ster.jpg"
+        alt="Pôster Scream"
+        style="width: 500px; height: auto; display: block; margin: 0 auto;"
+    >
+
+    <figcaption>
+        Scream 1996.
+    </figcaption>
+</figure>
+
+
+               <figure class="slide">
+    <img
+        src="https://upload.wikimedia.org/wikipedia/en/a/a1/Brokeback_mountain.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+        alt="Pôster Brokeback Mountain"
+        style="width: 500px; height: auto; display: block; margin: 0 auto;"
+    >
+
+    <figcaption>
+       Brokeback Mountain 2005.
+    </figcaption>
+</figure>
+
+                <figure class="slide">
+    <img
+        src="https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/87/02/71/19871241.jpg"
+        alt="Pôster Donnie Darko"
+        style="width: 500px; height: auto; display: block; margin: 0 auto;"
+    >
+
+    <figcaption>
+       Donnie Darko 2001.
+    </figcaption>
+</figure>
+
+                <figure class="slide">
+    <img
+        src="https://br.web.img2.acsta.net/pictures/210/132/21013221_20130617200543616.jpg"
+        alt="Pôster Sociedade dos Poetas Mortos"
+        style="width: 500px; height: auto; display: block; margin: 0 auto;"
+    >
+
+    <figcaption>
+       Sociedade dos Poetas Mortos 1989.
+    </figcaption>
+</figure>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>Desenvolvido para estudo de HTML e CSS</p>
+
+    </footer>
+
+</body>
+
+</html>
+
